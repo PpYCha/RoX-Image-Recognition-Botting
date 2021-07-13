@@ -1,24 +1,21 @@
+Requirements to use this program
 
+1. Install the latest version of python (https://www.python.org/) atleast 3. 8version
+   *check the add to PATH
+   *check install PIP
+2. Install ld player emulator ( set the settings 960x540 )
+3. Change the display resolution of monitor to 1366x768
+4. Install these libraries from an administrator terminal (windows) CMD:
 
-Install these libraries from an administrator terminal (windows):
+   pip install pywin32
+   pip install keyboard
+   pip install pyautogui
+   pip install opencv-python
+   pip install Pillow --upgrade
 
-pip install pywin32
-pip install keyboard
-pip install pyautogui
-pip install opencv-python
+How to use this program?
 
-Here are the libraries to paste at the start of the scripts:
-
-from pyautogui import *
-import pyautogui
-import time
-import keyboard
-import random
-import win32api, win32con
-
-Here is the click function:
-
-def click(x,y):
-    win32api.SetCursorPos((x,y))
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
-    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
+1. Open LD player !!do not move/drag the position of Emulator..
+2. Open RoX
+3. Set Rox Graphics Power Saving Mode
+4. Run the program..

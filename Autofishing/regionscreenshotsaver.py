@@ -5,6 +5,10 @@ import pyautogui
 # im1 = pyautogui.screenshot(region=(1114,360,143,144))
 # im1.save(r"./savedimage2.png")
 
+# im1 = pyautogui.screenshot(region=(953,446,143,144))
+# im1.save(r"./sogartCast.png")
+
 im1 = pyautogui.screenshot(region=(953,446,143,144))
-im1.save(r"./sogartCast.png")
+im1.save(r"./SouthGate.png")
+
 

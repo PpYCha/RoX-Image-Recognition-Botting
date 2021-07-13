@@ -30,7 +30,7 @@ xClick = 1020
 yClick = 510
 
 while keyboard.is_pressed('q') == False:
-    if pyautogui.locateOnScreen('sogartCast.png', region=(xMouse,yMouse,wRegion,yRegion), grayscale=True, confidence=0.8) != None:
+    if pyautogui.locateOnScreen('SouthGate.png', region=(xMouse,yMouse,wRegion,yRegion), grayscale=True, confidence=0.8) != None:
         print("cast")
         time.sleep(0.5)
         click(xClick,yClick)
