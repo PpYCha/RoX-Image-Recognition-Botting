@@ -8,7 +8,13 @@ import pyautogui
 # im1 = pyautogui.screenshot(region=(953,446,143,144))
 # im1.save(r"./sogartCast.png")
 
+# im1 = pyautogui.screenshot(region=(953,446,143,144))
+# im1.save(r"./westGateCast.png")
+
 im1 = pyautogui.screenshot(region=(953,446,143,144))
-im1.save(r"./SouthGate.png")
+im1.save(r"./westGateReel.png")
+
+
+print("compeleted")
 
 
