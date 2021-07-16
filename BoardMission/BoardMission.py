@@ -139,9 +139,27 @@ hAutoAttack = 50
 
 while keyboard.is_pressed('q') == False:
 
-    if pyautogui.locateOnScreen('mainlvl47.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('mainlvl472.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None:
+    if pyautogui.locateOnScreen('./images/mainlvl1.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('./images/mainlvl2.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('./images/mainlvl3.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None:
+        
+        daily = ['dailyRow1', 'dailyRow2', 'dailyRow3']
+        
+        for d in daily:
 
-        if pyautogui.locateOnScreen('dailyRow.png', region=(xDailyMouse,343,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('dailyRow2.png', region=(xDailyMouse,343,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('dailyRow3.png', region=(xDailyMouse,343,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None :
+            if pyautogui.locateOnScreen('pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
+                print("goin the location")      
+            
+            else:    
+                start1 = pyautogui.locateOnScreen('./images/' + d + '.png', region=(250,271,158,116), grayscale=True,  confidence=0.8) 
+                print(start1)
+                pyautogui.moveTo(start1)#Moves the mouse to the coordinates of the image
+                pos1 = pyautogui.position()
+                    
+                click(pos1.x,pos1.y)
+                print("daily clicked")
+                time.sleep(5)
+
+
+        if pyautogui.locateOnScreen('./images/mainlvl1' + '.png', region=(xDailyMouse,343,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None  :
         
             if pyautogui.locateOnScreen('pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
                 print("goin the location")      
@@ -149,7 +167,7 @@ while keyboard.is_pressed('q') == False:
                 print("daily click")
                 click(xDailyClick,343)
                 time.sleep(5)  
-        print("cant detect main")
+       
 
     else:
         if pyautogui.locateOnScreen('daily.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('daily2.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None :

@@ -15,7 +15,7 @@ import pyautogui
 # print("completed")
 
 im1 = pyautogui.screenshot(region=(250,271,37,16))
-im1.save(r"./mainlvl473.png")
+im1.save(r"./mainlvl48.png")
 print("completed")
 
 # im1 = pyautogui.screenshot(region=(250,343,37,16))
@@ -26,9 +26,9 @@ print("completed")
 # im1.save(r"./dailyRow2.png")
 # print("completed")
 
-im1 = pyautogui.screenshot(region=(250,343,37,16))
-im1.save(r"./dailyRow3.png")
-print("completed")
+# im1 = pyautogui.screenshot(region=(250,343,37,16))
+# im1.save(r"./dailyRow3.png")
+# print("completed")
 
 # im1 = pyautogui.screenshot(region=(250,271,37,16))
 # im1.save(r"./daily2.png")
