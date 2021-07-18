@@ -35,7 +35,7 @@ while keyboard.is_pressed('q') == False:
         time.sleep(0.5)
         click(xClick,yClick)
     
-    if pyautogui.locateOnScreen('SouthGateReel.png', region=(xMouse,yMouse,wRegion,yRegion), confidence=0.8) != None:
+    if pyautogui.locateOnScreen('westGateReel.png', region=(xMouse,yMouse,wRegion,yRegion), confidence=0.8) != None:
        
          pic = pyautogui.screenshot(region=(xMouse,yMouse,wRegion,yRegion))
          width, height = pic.size

@@ -2,8 +2,8 @@
 
 import pyautogui
 
-# im1 = pyautogui.screenshot(region=(250,271,37,16))
-# im1.save(r"./daily.png")
+# im1 = pyautogui.screenshot(region=(250,358,37,16))
+# im1.save(r"./daily6.png")
 # print("completed")
 
 # im1 = pyautogui.screenshot(region=(250,271,37,16))
@@ -14,12 +14,12 @@ import pyautogui
 # im1.save(r"./mainlvl472.png")
 # print("completed")
 
-im1 = pyautogui.screenshot(region=(250,271,37,16))
-im1.save(r"./mainlvl48.png")
-print("completed")
+# im1 = pyautogui.screenshot(region=(250,271,37,16))
+# im1.save(r"./mainlvl48.png")
+# print("completed")
 
-# im1 = pyautogui.screenshot(region=(250,343,37,16))
-# im1.save(r"./dailyRow.png")
+# im1 = pyautogui.screenshot(region=(250,358,37,16))
+# im1.save(r"./dailyRow4.png")
 # print("completed")
 
 # im1 = pyautogui.screenshot(region=(250,343,37,16))
@@ -69,12 +69,24 @@ print("completed")
 # im1.save(r"./skip2.png")
 # print("completed")
 
+# im1 = pyautogui.screenshot(region=(1028,124,102,37))
+# im1.save(r"./skip3.png")
+# print("completed")
+
 # im1 = pyautogui.screenshot(region=(835,208,30,30))
 # im1.save(r"./closeChannel.png")
 # print("completed")
 
 # im1 = pyautogui.screenshot(region=(814,285,77,71))
 # im1.save(r"./appeaseBird.png")
+# print("completed")
+
+im1 = pyautogui.screenshot(region=(814,285,77,71))
+im1.save(r"./search.png")
+print("completed")
+
+# im1 = pyautogui.screenshot(region=(814,285,77,71))
+# im1.save(r"./catch.png")
 # print("completed")
 
 # im1 = pyautogui.screenshot(region=(820,284,69,71))
@@ -111,4 +123,12 @@ print("completed")
 
 # im1 = pyautogui.screenshot(region=(795,500,50,50))
 # im1.save(r"./autoAttack.png")
+# print("completed")
+
+# im1 = pyautogui.screenshot(region=(557,380,14,25))
+# im1.save(r"./takeBoardMission.png")
+# print("completed")
+
+# im1 = pyautogui.screenshot(region=(619,522,151,47))
+# im1.save(r"./accept.png")
 # print("completed")
