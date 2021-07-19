@@ -6,7 +6,7 @@ import time
 import keyboard 
 import random
 import win32api, win32con
-
+import datetime
 
 def click(x,y):
     win32api.SetCursorPos((x,y))
@@ -136,56 +136,60 @@ wAutoAttack = 50
 hAutoAttack = 50
 
 #  or pyautogui.locateOnScreen('autoAttack.png', region=(xAutoAttack,yAutoAttack,wAutoAttack,hAutoAttack), grayscale=True, confidence=0.8) != None 
-
+print("RoX Botting")
 while keyboard.is_pressed('q') == False:
-    daily = ['daily', 'daily2', 'daily3', 'daily4','daily5', 'daily6', 'daily7','daily8','dailyRow1', 'dailyRow2', 'dailyRow3', 'dailyRow4']
+
+    daily = ['daily','daily2','daily3','daily4','daily5','daily6','daily7','daily8','dailyRow1','dailyRow2','dailyRow3','dailyRow4']
+
         
     for d in daily:
 
-     if pyautogui.locateOnScreen('pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
+     if pyautogui.locateOnScreen('./images/pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
                 print("goin the location")      
                 break
      else:    
-                start1 = pyautogui.locateOnScreen('./images/' + d + '.png', region=(250,271,158,116), grayscale=True,  confidence=0.8) 
-                print(start1)
+                start1 = pyautogui.locateOnScreen('./images/daily/' + d + '.png', region=(250,271,158,116), grayscale=True,  confidence=0.8) 
                 pyautogui.moveTo(start1)#Moves the mouse to the coordinates of the image
                 pos1 = pyautogui.position()
                 if  start1 != None  :
                         click(pos1.x,pos1.y)
                         print(d)
                         time.sleep(5)
-                
+   
+    skip = ['skip1', 'skip2']
 
-    if pyautogui.locateOnScreen('skip.png', region=(xSkipRegion,ySkipRegion,wSkipRegion,hSkipRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('skip2.png', region=(xSkipRegion,ySkipRegion,wSkipRegion,hSkipRegion), grayscale=True, confidence=0.8) != None  :
-        print("skip detected")
-        click(xSkipClick,ySkipClick)
-        time.sleep(1.5)
+    for s in skip:
+        if pyautogui.locateOnScreen('./images/skip/' + s + '.png', region=(xSkipRegion,ySkipRegion,wSkipRegion,hSkipRegion), grayscale=True, confidence=0.8) != None :
+            print(skip)
+            click(xSkipClick,ySkipClick)
+            break
+            time.sleep(1.5)
 
     if pyautogui.locateOnScreen('closeChannel.png', region=(xChannel,yChannel,wChannel,hChannel), grayscale=True, confidence=0.8) != None :
-        print("1= closeChannel")
+        print("close channel found")
         click(xChannelClick,yChannelClick)
         time.sleep(1.5)
 
     if pyautogui.locateOnScreen('questCompleted.png', region=(xmissionBoard,ymissionBoard,wmissionBoard,hmissionBoard), grayscale=True, confidence=0.8) != None :
         
         start = pyautogui.locateOnScreen('questCompleted.png', region=(xmissionBoard,ymissionBoard,wmissionBoard,hmissionBoard), grayscale=True, confidence=0.8) 
-        print(start)
         pyautogui.moveTo(start)#Moves the mouse to the coordinates of the image
         pos = pyautogui.position()
         
-        click(pos.x,pos.y)
         print("click quest completed")
+        click(pos.x,pos.y)
         time.sleep(2.5)
     else:
         if pyautogui.locateOnScreen('closeMb.png', region=(xCloseMb,yCloseMb,wCloseMb,hCloseMb), grayscale=True, confidence=0.8) != None :
-                time.sleep(2.5)
                 click(xCloseMbClick, yCloseMbClick)
                 print("close mission board")
+                time.sleep(2.5)
 
-    if pyautogui.locateOnScreen('submit.png', region=(xSubmit,ySubmit,wSubmit,hSubmit), grayscale=True, confidence=0.8) != None :
-            print("1= submit")
+    if pyautogui.locateOnScreen('./images/submit.png', region=(xSubmit,ySubmit,wSubmit,hSubmit), grayscale=True, confidence=0.8) != None :
+            print("submit found")
             click(xSubmitClick,ySubmitClick)
             time.sleep(2.5)
+
 
     if pyautogui.locateOnScreen('check.png', region=(xCheck,yCheck,wCheck,hCheck), grayscale=True, confidence=0.8) != None :
             print("1= check")
@@ -218,17 +222,24 @@ while keyboard.is_pressed('q') == False:
             time.sleep(2.5)
 
 
-    if pyautogui.locateOnScreen('handOver.png', region=(xHandOver,yHandOver,wHandOver,hHandOver), grayscale=True, confidence=0.8) != None or  pyautogui.locateOnScreen('handOver2.png', region=(xHandOver,yHandOver,wHandOver,hHandOver), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('handOver3.png', region=(xHandOver,yHandOver,wHandOver,hHandOver), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('handOver4.png', region=(xHandOver,yHandOver,wHandOver,hHandOver), grayscale=True, confidence=0.8) != None :
+    handOver = ['handOver1', 'handOver2', 'handOver3', 'handOver4']
+    for hO in handOver:
+        if pyautogui.locateOnScreen('./images/handover/' + hO + '.png', region=(xHandOver,yHandOver,wHandOver,hHandOver), grayscale=True, confidence=0.8) != None  :
                 print("handOver")
                 click(xHandOverClick,yHandOverClick)
+                break
                 time.sleep(2.5)
 
-    if pyautogui.locateOnScreen('handOverItem.png', region=(xHandOverItem,yHandOverItem,wHandOverItem,hHandOverItem), grayscale=True, confidence=0.8) != None :
+    if pyautogui.locateOnScreen('./images/handover/handOverItem.png', region=(xHandOverItem,yHandOverItem,wHandOverItem,hHandOverItem), grayscale=True, confidence=0.8) != None :
                 print("handOverItem")
                 click(xHandOverClickItem,yHandOverClickItem)
                 time.sleep(2.5)
 
-    if pyautogui.locateOnScreen('resurrect.png', region=(xResurrect,yResurrect,wResurrect,hResurrect), grayscale=True, confidence=0.8) != None :
+    if pyautogui.locateOnScreen('./images/resurrect.png', region=(xResurrect,yResurrect,wResurrect,hResurrect), grayscale=True, confidence=0.8) != None :
                 print("resurrect click")
                 click(xResurrectClick,yResurrectClick)
                 time.sleep(2.5)
+
+    dateTime = datetime.datetime.now()
+    print(dateTime.strftime("%X")) 
+ 
