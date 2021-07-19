@@ -138,48 +138,24 @@ hAutoAttack = 50
 #  or pyautogui.locateOnScreen('autoAttack.png', region=(xAutoAttack,yAutoAttack,wAutoAttack,hAutoAttack), grayscale=True, confidence=0.8) != None 
 
 while keyboard.is_pressed('q') == False:
-
-    if pyautogui.locateOnScreen('./images/mainlvl1.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('./images/mainlvl2.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('./images/mainlvl3.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None:
+    daily = ['daily', 'daily2', 'daily3', 'daily4','daily5', 'daily6', 'daily7','daily8','dailyRow1', 'dailyRow2', 'dailyRow3', 'dailyRow4']
         
-        daily = ['daily', 'daily2', 'daily3', 'daily4','daily5', 'daily6','dailyRow1', 'dailyRow2', 'dailyRow3', 'dailyRow4']
-        
-        for d in daily:
+    for d in daily:
 
-            if pyautogui.locateOnScreen('pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
+     if pyautogui.locateOnScreen('pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
                 print("goin the location")      
                 break
-            else:    
+     else:    
                 start1 = pyautogui.locateOnScreen('./images/' + d + '.png', region=(250,271,158,116), grayscale=True,  confidence=0.8) 
                 print(start1)
                 pyautogui.moveTo(start1)#Moves the mouse to the coordinates of the image
                 pos1 = pyautogui.position()
-                    
-                click(pos1.x,pos1.y)
-                print(d)
-                time.sleep(3)
+                if  start1 != None  :
+                        click(pos1.x,pos1.y)
+                        print(d)
+                        time.sleep(5)
                 
 
-
-        if pyautogui.locateOnScreen('./images/mainlvl1' + '.png', region=(xDailyMouse,343,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None  :
-        
-            if pyautogui.locateOnScreen('pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
-                print("goin the location")      
-            else:
-                print("daily click")
-                click(xDailyClick,343)
-                time.sleep(5)  
-       
-
-    # else:
-    #     if pyautogui.locateOnScreen('daily.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('daily2.png', region=(xDailyMouse,yDailyMouse,wDailyRegion,yDailyRegion), grayscale=True, confidence=0.8) != None :
-        
-    #         if pyautogui.locateOnScreen('pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
-    #             print("goin the location")      
-    #         else:
-    #             print("daily click")
-    #             click(xDailyClick,yDailyClick)
-    #             time.sleep(5)         
-  
     if pyautogui.locateOnScreen('skip.png', region=(xSkipRegion,ySkipRegion,wSkipRegion,hSkipRegion), grayscale=True, confidence=0.8) != None or pyautogui.locateOnScreen('skip2.png', region=(xSkipRegion,ySkipRegion,wSkipRegion,hSkipRegion), grayscale=True, confidence=0.8) != None  :
         print("skip detected")
         click(xSkipClick,ySkipClick)
@@ -230,7 +206,8 @@ while keyboard.is_pressed('q') == False:
                 print("1= pick")
                 click(xCheckClick3,yCheckClick3)
                 time.sleep(2.5)  
-    if pyautogui.locateOnScreen('search.png', region=(xCheck3,yCheck3,wCheck3,hCheck2), grayscale=True, confidence=0.8) != None :
+                
+    if pyautogui.locateOnScreen('search.png', region=(814,285,77,71), grayscale=True, confidence=0.8) != None :
                 print("1= pick")
                 click(xCheckClick3,yCheckClick3)
                 time.sleep(2.5)                
@@ -255,19 +232,3 @@ while keyboard.is_pressed('q') == False:
                 print("resurrect click")
                 click(xResurrectClick,yResurrectClick)
                 time.sleep(2.5)
-
-    # if pyautogui.locateOnScreen('takeBoardMission.png', region=(xmissionBoard,ymissionBoard,38,37), grayscale=True, confidence=0.8) != None :
-        
-    #     start = pyautogui.locateOnScreen('takeBoardMission.png', region=(xmissionBoard,ymissionBoard,wmissionBoard,hmissionBoard), grayscale=True, confidence=0.8) 
-    #     print(start)
-    #     pyautogui.moveTo(start)#Moves the mouse to the coordinates of the image
-    #     pos = pyautogui.position()
-        
-    #     click(pos.x,pos.y)
-    #     print("click quest completed")
-    #     time.sleep(2.5)
-
-    # if pyautogui.locateOnScreen('accept.png', region=(xSubmit,ySubmit,wSubmit,hSubmit), grayscale=True, confidence=0.8) != None :
-    #         print("1= accept")
-    #         click(xSubmitClick,ySubmitClick)
-    #         time.sleep(2.5)
