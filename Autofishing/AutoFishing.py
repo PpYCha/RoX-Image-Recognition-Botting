@@ -30,12 +30,16 @@ xClick = 1020
 yClick = 510
 
 while keyboard.is_pressed('q') == False:
-    if pyautogui.locateOnScreen('SouthGate.png', region=(xMouse,yMouse,wRegion,yRegion), grayscale=True, confidence=0.8) != None:
-        print("cast")
-        time.sleep(0.5)
-        click(xClick,yClick)
+
+    cast = ['cast1','cast2','cast3','cast4','cast5','cast6','cast7',]
+    for c in cast:
+        if pyautogui.locateOnScreen('./images/cast/' + c + '.png', region=(xMouse,yMouse,wRegion,yRegion), grayscale=True, confidence=0.8) != None:
+            print("cast")
+            click(xClick,yClick)
+            time.sleep(0.5)
+            break
     
-    if pyautogui.locateOnScreen('westGateReel.png', region=(xMouse,yMouse,wRegion,yRegion), confidence=0.8) != None:
+    if pyautogui.locateOnScreen('./images/reel/reel5.png', region=(xMouse,yMouse,wRegion,yRegion), confidence=0.8) != None:
        
          pic = pyautogui.screenshot(region=(xMouse,yMouse,wRegion,yRegion))
          width, height = pic.size

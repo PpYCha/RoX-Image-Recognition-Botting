@@ -2,9 +2,9 @@
 
 import pyautogui
 
-im1 = pyautogui.screenshot(region=(250,332,37,16))
-im1.save(r"./daily8.png")
-print("completed")
+# im1 = pyautogui.screenshot(region=(250,332,37,16))
+# im1.save(r"./daily8.png")
+# print("completed")
 
 # im1 = pyautogui.screenshot(region=(250,271,37,16))
 # im1.save(r"./mainlvl47.png")
@@ -101,9 +101,9 @@ print("completed")
 # im1.save(r"./pick.png")
 # print("completed")
 
-# im1 = pyautogui.screenshot(region=(940,479,77,30))
-# im1.save(r"./handOver2.png")
-# print("completed")
+im1 = pyautogui.screenshot(region=(1032,479,85,4))
+im1.save(r"./handOver5.png")
+print("completed")
 
 # im1 = pyautogui.screenshot(region=(940,479,77,30))
 # im1.save(r"./handOver3.png")

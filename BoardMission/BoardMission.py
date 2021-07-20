@@ -222,9 +222,9 @@ while keyboard.is_pressed('q') == False:
             time.sleep(2.5)
 
 
-    handOver = ['handOver1', 'handOver2', 'handOver3', 'handOver4']
+    handOver = ['handOver5']
     for hO in handOver:
-        if pyautogui.locateOnScreen('./images/handover/' + hO + '.png', region=(xHandOver,yHandOver,wHandOver,hHandOver), grayscale=True, confidence=0.8) != None  :
+        if pyautogui.locateOnScreen('./images/handover/' + hO + '.png', region=(1032,479,85,4), grayscale=True, confidence=0.8) != None  :
                 print("handOver")
                 click(xHandOverClick,yHandOverClick)
                 break
