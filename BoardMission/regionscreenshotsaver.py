@@ -2,9 +2,9 @@
 
 import pyautogui
 
-# im1 = pyautogui.screenshot(region=(250,332,37,16))
-# im1.save(r"./daily8.png")
-# print("completed")
+im1 = pyautogui.screenshot(region=(250,359,37,16))
+im1.save(r"./daily11.png")
+print("completed")
 
 # im1 = pyautogui.screenshot(region=(250,271,37,16))
 # im1.save(r"./mainlvl47.png")
@@ -61,16 +61,12 @@ import pyautogui
 # im1.save(r"./closeMb.png")
 # print("completed")
 
-# im1 = pyautogui.screenshot(region=(1028,124,102,37))
+# im1 = pyautogui.screenshot(region=(1037,136,17,15))
 # im1.save(r"./skip.png")
 # print("completed")
 
-# im1 = pyautogui.screenshot(region=(1028,124,102,37))
-# im1.save(r"./skip2.png")
-# print("completed")
-
-# im1 = pyautogui.screenshot(region=(1028,124,102,37))
-# im1.save(r"./skip3.png")
+# im1 = pyautogui.screenshot(region=(253,374,17,12))
+# im1.save(r"./kill.png")
 # print("completed")
 
 # im1 = pyautogui.screenshot(region=(835,208,30,30))
@@ -101,9 +97,9 @@ import pyautogui
 # im1.save(r"./pick.png")
 # print("completed")
 
-im1 = pyautogui.screenshot(region=(1032,479,85,4))
-im1.save(r"./handOver5.png")
-print("completed")
+# im1 = pyautogui.screenshot(region=(1032,479,85,4))
+# im1.save(r"./handOver5.png")
+# print("completed")
 
 # im1 = pyautogui.screenshot(region=(940,479,77,30))
 # im1.save(r"./handOver3.png")

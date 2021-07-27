@@ -139,15 +139,18 @@ hAutoAttack = 50
 print("RoX Botting")
 while keyboard.is_pressed('q') == False:
 
-    daily = ['daily','daily2','daily3','daily4','daily5','daily6','daily7','daily8','dailyRow1','dailyRow2','dailyRow3','dailyRow4']
+    daily = ['daily','daily2','daily3','daily4','daily5','daily6','daily7','daily8', 'daily9', 'daily10','daily11','dailyRow1','dailyRow2','dailyRow3','dailyRow4']
+   
 
-        
     for d in daily:
 
      if pyautogui.locateOnScreen('./images/pathFinding.png', region=(xPath,yPath,wRegionPath,hRegionPath), grayscale=True, confidence=0.8) != None  :
                 print("goin the location")      
                 break
      else:    
+        #   if pyautogui.locateOnScreen('./images/kill.png', region=(250,271,158,116), grayscale=True, confidence=0.8) != None  :
+        #         print("kill found")
+        #   else:
                 start1 = pyautogui.locateOnScreen('./images/daily/' + d + '.png', region=(250,271,158,116), grayscale=True,  confidence=0.8) 
                 pyautogui.moveTo(start1)#Moves the mouse to the coordinates of the image
                 pos1 = pyautogui.position()
@@ -155,15 +158,23 @@ while keyboard.is_pressed('q') == False:
                         click(pos1.x,pos1.y)
                         print(d)
                         time.sleep(5)
+                        break
+                # if d == "dailyRow4":
+                  
+                #         pyautogui.moveTo(671, 367)
+                #         pyautogui.dragTo(800, 367,button='left')
+                #         pyautogui.click(671, 367,button='left')
+                #         print("moving mouse")
+                #         time.sleep(5)
    
-    skip = ['skip1', 'skip2']
+    skip = ['skip1', 'skip2', 'skip3']
 
     for s in skip:
         if pyautogui.locateOnScreen('./images/skip/' + s + '.png', region=(xSkipRegion,ySkipRegion,wSkipRegion,hSkipRegion), grayscale=True, confidence=0.8) != None :
-            print(skip)
+            print(s)
             click(xSkipClick,ySkipClick)
-            break
             time.sleep(1.5)
+            break
 
     if pyautogui.locateOnScreen('closeChannel.png', region=(xChannel,yChannel,wChannel,hChannel), grayscale=True, confidence=0.8) != None :
         print("close channel found")
